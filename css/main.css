@@ -1,2 +1,154 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
 body {
-  color: #133551; }
+  background-image: url(../assets/bg.jpg); }
+
+.header-wrapper::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.social-boxes {
+  float: right; }
+
+.social-box {
+  display: inline-block;
+  list-style: none;
+  width: 65px;
+  height: 65px; }
+
+.nav-boxes {
+  padding: 0;
+  max-width: 1075px;
+  margin-left: auto;
+  margin-right: auto; }
+  .nav-boxes::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.nav-box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  height: 40px;
+  list-style: none;
+  background-color: #b32e2e;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px; }
+  .nav-box:last-child {
+    margin-right: 0; }
+
+.title-wrapper {
+  margin: 0 auto;
+  max-width: 1075px;
+  height: 357px;
+  border: 10px solid white;
+  background-image: url(../assets/top-image.png);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.title-wrapper-logo {
+  position: relative;
+  top: 60px;
+  left: 30px; }
+
+.nav-buttons {
+  padding: 0;
+  text-align: center; }
+
+.nav-button {
+  list-style: none;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: white; }
+
+.articles {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1075px;
+  margin-left: auto;
+  margin-right: auto; }
+  .articles::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.article {
+  list-style: none;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  height: 350px;
+  background: white; }
+  .article:last-child {
+    margin-right: 0; }
+
+.skater-profiles-wrapper {
+  margin: 0;
+  padding: 0;
+  max-width: 1075px;
+  margin-left: auto;
+  margin-right: auto; }
+  .skater-profiles-wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.skater-profiles-wrapper > * {
+  display: inline-block; }
+
+.skater-pic {
+  background-color: white;
+  border: 5px solid white; }
+
+.skater-large {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .skater-large:last-child {
+    margin-right: 0; }
+
+.skater4,
+.skater3 {
+  display: inline-block;
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 48.21067%;
+  height: 232px; }
+  .skater4:last-child,
+  .skater3:last-child {
+    margin-right: 0; }
+
+.skater1 {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 100%;
+  height: 232px; }
+  .skater1:last-child {
+    margin-right: 0; }
+
+.skater2 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-right: 0;
+  height: 474px; }
+  .skater2:last-child {
+    margin-right: 0; }

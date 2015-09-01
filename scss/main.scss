@@ -1,2 +1,139 @@
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
+
+$bottom-border: rgba(144, 143, 141, 0.5);
+$nav-button: rgba(179, 46, 46, 1);
+
+// background image
+body {
+  background-image: url(../assets/bg.jpg);
+}
+
+// Body container
+
+
+// Header with the social link buttons
+.header-wrapper {
+  @include clearfix;
+}
+
+
+.social-boxes {
+  float: right;
+}
+
+.social-box {
+  display: inline-block;
+  list-style: none;
+
+  width: 65px;
+  height: 65px;
+}
+
+// Navigation boxes
+.nav-boxes {
+  padding: 0;
+  @include outer-container(1075px);
+}
+
+.nav-box {
+  @include span-columns(3);
+  height: 40px;
+
+  list-style: none;
+
+  background-color: $nav-button;
+
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+// Logo Box
+.title-wrapper {
+  margin: 0 auto;
+  max-width: 1075px;
+  height: 357px;
+  border: 10px solid white;
+
+  background-image: url(../assets/top-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title-wrapper-logo {
+  position: relative;
+  top:60px;
+  left: 30px;
+}
+
+// Buttons
+.nav-buttons {
+  padding: 0;
+  text-align: center;
+}
+
+.nav-button {
+  list-style: none;
+  display: inline-block;
+
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+
+  background-color: white;
+}
+
+// Article
+.articles {
+  padding: 0;
+  margin: 0 auto;
+  @include outer-container(1075px);
+}
+
+.article {
+  list-style: none;
+  @include span-columns(4);
+  height: 350px;
+  background: white;
+}
+
+//Profile Pics
+.skater-profiles-wrapper {
+  margin: 0;
+  padding: 0;
+
+  @include outer-container(1075px);
+}
+
+.skater-profiles-wrapper > * {
+  display: inline-block;
+}
+
+.skater-pic {
+  background-color: white;
+  border: 5px solid white;
+}
+
+.skater-large {
+  @include span-columns(8);
+}
+
+.skater4,
+.skater3 {
+  display: inline-block;
+  @include span-columns(4 of 8);
+  height: 232px;
+}
+
+.skater1 {
+  @include span-columns(8 of 8);
+  height: 232px;
+}
+
+.skater2 {
+  @include span-columns(4);
+  @include omega();
+  height: 474px;
+}
