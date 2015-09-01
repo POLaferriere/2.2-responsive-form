@@ -1,0 +1,17 @@
+body {
+  background-color: $primary-color;
+  color: @accent-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+label {
+  display: block;
+}
+
+label {
+  text-transform: uppercase;
+}
