@@ -1,6 +1,2 @@
-$first-color: rgba(19, 53, 81, 1);
-
-
-body {
-  color: $first-color;
-}
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../bower_components/neat/app/assets/stylesheets/neat';
