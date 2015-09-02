@@ -1,70 +1,160 @@
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
-$bottom-border: rgba(144, 143, 141, 0.5);
+// Colors
+$bottom-border: rgba(144, 143, 141, .5);
+$border-color: rgba(159, 159, 159, 1);
 $nav-button: rgba(179, 46, 46, 1);
+$background-color: white;
+$text-color: white;
+$light-text: rgba(174, 174, 174, 1);
+$shadow-color: rgba(255, 255, 255, 0.5);
+$shadow-color-2: rgba(0, 0, 0, 0.3);
+$shadow-color-3: rgba(0, 0, 0, 0.5);
+$facebook: rgba(68, 88, 151, 1);
+$rss: rgba(204, 144, 50, 1);
+$twitter: rgba(106, 141, 199, 1);
+$youtube: rgba(178, 56, 45, 1);
+
+
+// Box-Shadowing
+$box-shadow: 0 5px $shadow-color;
 
 // background image
 body {
-  background-image: url(../assets/bg.jpg);
+  background: linear-gradient($shadow-color-3, $shadow-color-3), url('../assets/bg.jpg');
+  background-size: cover;
 }
+
+
 
 // Body container
-
-
 // Header with the social link buttons
+
 .header-wrapper {
   @include clearfix;
+  max-width: 1075px;
+  margin: 0 auto;
 }
 
-
 .social-boxes {
+  position: relative;
   float: right;
+  padding: 0;
+  height: 65px;
 }
 
 .social-box {
   display: inline-block;
-  list-style: none;
-
   width: 65px;
   height: 65px;
+  margin: 0 3px;
+  list-style: none;
+  font-size: 2.5em;
+  text-align: center;
+  line-height: 65px;
+
+  box-shadow: 0 4px $shadow-color-2;
+}
+
+.subscribe {
+  display: inline-block;
+  padding-right: 100px;
+
+  font-family: $helvetica;
+  font-size: 1em;
+  color: $text-color;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.bullets {
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  left: -25px;
+}
+
+.bullets > span {
+  display: block;
+  font-size: 0.2em;
+  line-height: 0px;
+  margin: 13px;
+  color: $text-color;
+  vertical-align: middle;
+}
+
+.facebook {
+  background-color: $facebook;
+  position: relative;
+}
+
+.rss {
+  background-color: $rss;
+}
+
+.twitter {
+  background-color: $twitter;
+}
+
+.youtube {
+  background-color: $youtube;
+}
+
+.fa {
+  color: $text-color;
+  opacity: 0.3;
 }
 
 // Navigation boxes
 .nav-boxes {
-  padding: 0;
   @include outer-container(1075px);
+  padding: 0;
 }
 
 .nav-box {
   @include span-columns(3);
+  background-color: $nav-button;
   height: 40px;
-
   list-style: none;
 
-  background-color: $nav-button;
-
-  color: white;
+  font-family: $helvetica;
   text-align: center;
   text-transform: uppercase;
   line-height: 40px;
+  color: $text-color;
+
+  box-shadow: 0 4px $shadow-color-2;
 }
 
 // Logo Box
 .title-wrapper {
+  position: relative;
   margin: 0 auto;
   max-width: 1075px;
   height: 357px;
   border: 10px solid white;
-
-  background-image: url(../assets/top-image.png);
+  background-image: url("../assets/top-image.png");
   background-size: cover;
   background-repeat: no-repeat;
+
+  box-shadow: 0 4px $shadow-color-2;
+}
+
+.title-wrapper::before {
+  content:"";
+  background-image: url(../assets/grid.png);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .title-wrapper-logo {
   position: relative;
-  top:60px;
+  top: 60px;
   left: 30px;
 }
 
@@ -77,11 +167,9 @@ body {
 .nav-button {
   list-style: none;
   display: inline-block;
-
   width: 16px;
   height: 16px;
   border-radius: 100%;
-
   background-color: white;
 }
 
@@ -97,13 +185,34 @@ body {
   @include span-columns(4);
   height: 350px;
   background: white;
+
+  padding: 0 15px 30px 15px;
+
+  font-family: $helvetica;
+
+  box-shadow: 0 4px $shadow-color-2;
+}
+
+.article-title {
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+
+.article-date {
+  color: $light-text;
+  font-weight: normal;
+}
+
+.article > p {
+  line-height: 2em;
+  overflow: hidden;
 }
 
 //Profile Pics
 .skater-profiles-wrapper {
   margin: 10px 0;
   padding: 0;
-
   @include outer-container(1075px);
 }
 
@@ -114,8 +223,9 @@ body {
 .skater-pic {
   background-color: white;
   border: 5px solid white;
-
   text-align: center;
+
+  box-shadow: 0 4px $shadow-color-2;
 }
 
 .skater-pic-text {
@@ -127,10 +237,10 @@ body {
   text-align: center;
   font-size: 33px;
   text-transform: uppercase;
-
   display: block;
-  position:relative;
-  top: 40%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .skater-large {
@@ -152,11 +262,50 @@ body {
 }
 
 .skater4 {
-  background: no-repeat right url(../assets/sk8er-4.png);
+  position: relative;
+  background: no-repeat right url("../assets/sk8er-4.png");
+}
+
+.skateboarders {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -275px;
+
+  background-color: $nav-button;
+  width: 238px;
+  height: 97px;
+
+  font-family: $helvetica;
+  font-weight: bolder;
+  color: $text-color;
+  line-height: 97px;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  box-shadow: 0 4px $shadow-color-2;
+}
+
+.skateboarders-triangle {
+  z-index: 1000;
+  @include triangle(97px 30px, $nav-button, right);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -37px;
+}
+
+.skateboarders-triangle-shadow {
+  @include triangle(97px 30px, $shadow-color-2, right);
+  position: absolute;
+  @include calc(top, "50% + 4px");
+  transform: translateY(-50%);
+  left: -37px;
 }
 
 .skater3 {
-  background: no-repeat center url(../assets/sk8er-3.png);
+  background: no-repeat center url("../assets/sk8er-3.png");
 }
 
 .skater-large-lower {
@@ -165,17 +314,14 @@ body {
 
 .skater1 {
   height: 232px;
-
-  background: no-repeat center url(../assets/sk8er-1.png);
+  background: no-repeat center url("../assets/sk8er-1.png");
 }
 
 .skater2 {
   @include span-columns(4);
   @include omega();
   height: 474px;
-
   line-height: 474px;
-
   background: no-repeat 200% url("../assets/sk8er-2.png");
   background-position: right;
 }
@@ -187,13 +333,94 @@ body {
   margin: 20px auto;
   padding: 0;
   text-align: center;
+  background-color: $background-color;
 
-  background-color: white;
+  box-shadow: 0 4px $shadow-color-2;
 }
 
 .skateboards {
   list-style: none;
   display: inline-block;
-  margin: 12px  1.5%;
+  margin: 12px 1.5%;
   vertical-align: middle;
+}
+
+// Contact Us box at the bottom
+.contact-us-wrapper {
+  @include outer-container(1075px);
+  background-color: $background-color;
+  height: em(362);
+  padding: 20px;
+
+  box-shadow: 0 4px $shadow-color-2;
+}
+
+.contact-us-article {
+  @include span-columns(7);
+  padding-left: 10px;
+
+  font-family: $helvetica;
+  line-height: 2em;
+}
+
+.contact-heading {
+  font-size: em(25);
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.contact-social-buttons {
+  padding: 0;
+}
+
+.contact-social-button {
+  display: inline-block;
+  width: em(30);
+  height: em(30);
+
+  list-style: none;
+  text-align: center;
+  line-height: em(30);
+  @include filter(grayscale(100%));
+}
+
+
+.contact-us-input {
+  @include span-columns(5);
+}
+
+.contact-us-inputs {
+  @include fill-parent();
+}
+
+.contact-us-inputs > * {
+  display: block;
+}
+
+.contact-input {
+  @include span-columns(4.5 of 5);
+  height: em(44);
+  margin: em(20) 0;
+  border:1px solid $border-color;
+  box-shadow: inset 3px 3px $shadow-color-2;
+
+  padding: 5px;
+  font-size: 14px;
+}
+
+.your-message {
+  resize: none;
+  height: em(108);
+}
+
+.submit {
+  @include span-columns(3 of 5);
+  @include shift(1.5);
+  background-color: $nav-button;
+  height: 40px;
+  border: none;
+
+  color: $text-color;
+  font-size: 13px;
+  text-transform: uppercase;
 }

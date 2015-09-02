@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Form</title>
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 
 </head>
@@ -16,19 +18,29 @@
 
     <div class="header-wrapper">
       <ul class="social-boxes">
-        <li class="social-box"></li>
-        <li class="social-box"></li>
-        <li class="social-box"></li>
-        <li class="social-box"></li>
+        <li class="subscribe">Subscribe  &bull;</li>
+        <li class="social-box facebook">
+          <div class="bullets">
+            <span>&bull;</span>
+            <span>&bull;</span>
+            <span>&bull;</span>
+            <span>&bull;</span>
+            <span>&bull;</span>
+          </div>
+          <i class="fa fa-facebook"></i>
+        </li>
+        <li class="social-box rss"><i class="fa fa-rss"></i></li>
+        <li class="social-box twitter"><i class="fa fa-twitter"></i></li>
+        <li class="social-box youtube"><i class="fa fa-youtube"></i></li>
       </ul>
     </div>
 
     <div class="nav-wrapper">
       <ul class="nav-boxes">
-        <li class="nav-box">Sk8t News</li>
-        <li class="nav-box">Skateboarders</li>
-        <li class="nav-box">Board Design</li>
-        <li class="nav-box">Contact Us</li>
+        <li class="nav-box">&mdash; Sk8t News &mdash;</li>
+        <li class="nav-box">&mdash; Skateboarders &mdash;</li>
+        <li class="nav-box">&mdash; Board Design &mdash;</li>
+        <li class="nav-box">&mdash; Contact Us &mdash;</li>
       </ul>
     </div>
 
@@ -46,44 +58,104 @@
 
     <div class="articles-wrapper">
       <ul class="articles">
-        <li class="article"></li>
-        <li class="article"></li>
-        <li class="article"></li>
+        <li class="article">
+          <h1 class="article-title">Tony Hawk Foundation Raises Big Money At Celeb Fundraiser</h1>
+          <h5 class="article-date">October 10, 2013</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, hic, modi. Nesciunt ipsam sequi tenetur fuga molestiae distinctio accusantium sapiente, nemo nisi ab saepe, doloribus. Voluptatibus inventore eius consequatur, provident?</p>
+        </li>
+        <li class="article">
+          <h1 class="article-title">Rodney Mullen: Pop an ollie and innovate! (TED Talk)</h1>
+          <h5 class="article-date">March 10, 2013</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe iste corrupti, voluptate! Nesciunt eligendi hic distinctio, quibusdam officiis nulla earum, cumque, incidunt odio deserunt illo fuga dignissimos optio aperiam explicabo!</p>
+        </li>
+        <li class="article">
+          <h1 class="article-title">Ray Barbee Talks 'Ban This'</h1>
+          <h5 class="article-date">Oct 4, 2013</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi vero obcaecati ipsa neque, deserunt, laborum sapiente similique molestias hic consectetur, saepe dignissimos consequatur, quidem odio nam at! Consectetur, error, repellat.</p>
+        </li>
       </ul>
     </div>
 
     <div class="skater-profiles-wrapper">
       <div class="skater-large">
         <div class="skater-large-upper">
-          <div class="skater4 skater-pic"><span class="skater-pic-text">Lance Mountain</span></div>
-          <div class="skater3 skater-pic"><span class="skater-pic-text">Rodney Mullen</span></div>
+          <div class="skater4 skater-pic">
+            <div class="skateboarders">Skateboarders</div>
+            <div class="skateboarders-triangle"></div>
+            <div class="skateboarders-triangle-shadow"></div>
+            <span class="skater-pic-text">Lance Mountain</span>
+          </div>
+          <div class="skater3 skater-pic">
+            <span class="skater-pic-text">Rodney Mullen</span>
+          </div>
         </div>
         <div class="skater-large-lower">
-          <div class="skater1 skater-pic"><span class="skater-pic-text">Steve Caballero</span></div>
+          <div class="skater1 skater-pic">
+            <span class="skater-pic-text">Steve Caballero</span>
+          </div>
         </div>
       </div>
-      <div class="skater2 skater-pic"><span class="skater-pic-text">Tommy Guerrero</span></div>
+      <div class="skater2 skater-pic">
+        <span class="skater-pic-text">Tommy Guerrero</span>
+      </div>
     </div>
 
     <ul class="skateboards-wrapper">
-      <li class="skateboards"><img src="assets/sk8-1.png" alt="sk8board"></li>
-      <li class="skateboards"><img src="assets/sk8-2.png" alt="sk8board"></li>
-      <li class="skateboards"><img src="assets/sk8-3.png" alt="sk8board"></li>
-      <li class="skateboards"><img src="assets/sk8-4.png" alt="sk8board"></li>
-      <li class="skateboards"><img src="assets/sk8-5.png" alt="sk8board"></li>
-      <li class="skateboards"><img src="assets/sk8-6.png" alt="sk8board"></li>
-      <li class="skateboards"><img src="assets/sk8-7.png" alt="sk8board"></li>
-      <li class="skateboards"><img src="assets/sk8-8.png" alt="sk8board"></li>
-      <li class="skateboards"><img src="assets/sk8-9.png" alt="sk8board"></li>
-      <li class="skateboards"><img src="assets/sk8-10.png" alt="sk8board"></li>
+      <li class="skateboards">
+        <img src="assets/sk8-1.png" alt="sk8board">
+      </li>
+      <li class="skateboards">
+        <img src="assets/sk8-2.png" alt="sk8board">
+      </li>
+      <li class="skateboards">
+        <img src="assets/sk8-3.png" alt="sk8board">
+      </li>
+      <li class="skateboards">
+        <img src="assets/sk8-4.png" alt="sk8board">
+      </li>
+      <li class="skateboards">
+        <img src="assets/sk8-5.png" alt="sk8board">
+      </li>
+      <li class="skateboards">
+        <img src="assets/sk8-6.png" alt="sk8board">
+      </li>
+      <li class="skateboards">
+        <img src="assets/sk8-7.png" alt="sk8board">
+      </li>
+      <li class="skateboards">
+        <img src="assets/sk8-8.png" alt="sk8board">
+      </li>
+      <li class="skateboards">
+        <img src="assets/sk8-9.png" alt="sk8board">
+      </li>
+      <li class="skateboards">
+        <img src="assets/sk8-10.png" alt="sk8board">
+      </li>
     </ul>
 
     <div class="contact-us-wrapper">
-      <div class="contact-us-article"></div>
-      <div class="contact-us-input"></div>
+      <div class="contact-us-article">
+        <h3 class="contact-heading">Contact Us for More Information</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nulla corporis tempora tenetur laborum temporibus cupiditate, maiores velit deleniti error, explicabo, fuga harum voluptate odio. Iste modi placeat, natus et.</p>
+        <ul class="contact-social-buttons">
+          <li class="contact-social-button facebook"><i class="fa fa-facebook"></i></li>
+          <li class="contact-social-button rss"><i class="fa fa-rss"></i></li>
+          <li class="contact-social-button twitter"><i class="fa fa-twitter"></i></li>
+          <li class="contact-social-button youtube"><i class="fa fa-youtube"></i></li>
+        </ul>
+      </div>
+      <div class="contact-us-input">
+        <form class="contact-us-inputs" action="">
+          <input class="contact-input name" type="text" placeholder="NAME">
+          <input class="contact-input email" type="text" placeholder="EMAIL">
+          <textarea class="contact-input your-message" placeholder="YOUR MESSAGE"></textarea>
+          <button class="submit">Submit</button>
+        </form>
+      </div>
     </div>
 
   </div>
 
 </body>
+
 </html>
