@@ -101,7 +101,7 @@ body {
 
 //Profile Pics
 .skater-profiles-wrapper {
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
 
   @include outer-container(1075px);
@@ -114,6 +114,23 @@ body {
 .skater-pic {
   background-color: white;
   border: 5px solid white;
+
+  text-align: center;
+}
+
+.skater-pic-text {
+  font-family: $helvetica;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  color: white;
+  line-height: 100%;
+  text-align: center;
+  font-size: 33px;
+  text-transform: uppercase;
+
+  display: block;
+  position:relative;
+  top: 40%;
 }
 
 .skater-large {
@@ -134,16 +151,49 @@ body {
   height: 232px;
 }
 
+.skater4 {
+  background: no-repeat right url(../assets/sk8er-4.png);
+}
+
+.skater3 {
+  background: no-repeat center url(../assets/sk8er-3.png);
+}
+
 .skater-large-lower {
   @include fill-parent();
 }
 
 .skater1 {
   height: 232px;
+
+  background: no-repeat center url(../assets/sk8er-1.png);
 }
 
 .skater2 {
   @include span-columns(4);
   @include omega();
   height: 474px;
+
+  line-height: 474px;
+
+  background: no-repeat 200% url("../assets/sk8er-2.png");
+  background-position: right;
+}
+
+// Skateboard Images
+.skateboards-wrapper {
+  max-width: 1075px;
+  height: 295px;
+  margin: 20px auto;
+  padding: 0;
+  text-align: center;
+
+  background-color: white;
+}
+
+.skateboards {
+  list-style: none;
+  display: inline-block;
+  margin: 12px  1.5%;
+  vertical-align: middle;
 }

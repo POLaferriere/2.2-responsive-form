@@ -97,7 +97,7 @@ body {
     margin-right: 0; }
 
 .skater-profiles-wrapper {
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
   max-width: 1075px;
   margin-left: auto;
@@ -112,7 +112,21 @@ body {
 
 .skater-pic {
   background-color: white;
-  border: 5px solid white; }
+  border: 5px solid white;
+  text-align: center; }
+
+.skater-pic-text {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  color: white;
+  line-height: 100%;
+  text-align: center;
+  font-size: 33px;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  top: 40%; }
 
 .skater-large {
   float: left;
@@ -143,11 +157,18 @@ body {
   .skater3:last-child {
     margin-right: 0; }
 
+.skater4 {
+  background: no-repeat right url(../assets/sk8er-4.png); }
+
+.skater3 {
+  background: no-repeat center url(../assets/sk8er-3.png); }
+
 .skater-large-lower {
   width: 100%; }
 
 .skater1 {
-  height: 232px; }
+  height: 232px;
+  background: no-repeat center url(../assets/sk8er-1.png); }
 
 .skater2 {
   float: left;
@@ -155,6 +176,23 @@ body {
   margin-right: 2.35765%;
   width: 31.76157%;
   margin-right: 0;
-  height: 474px; }
+  height: 474px;
+  line-height: 474px;
+  background: no-repeat 200% url("../assets/sk8er-2.png");
+  background-position: right; }
   .skater2:last-child {
     margin-right: 0; }
+
+.skateboards-wrapper {
+  max-width: 1075px;
+  height: 295px;
+  margin: 20px auto;
+  padding: 0;
+  text-align: center;
+  background-color: white; }
+
+.skateboards {
+  list-style: none;
+  display: inline-block;
+  margin: 12px  1.5%;
+  vertical-align: middle; }
