@@ -118,9 +118,18 @@ body {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%; }
+  width: 65.88078%;
+  height: 474px; }
   .skater-large:last-child {
     margin-right: 0; }
+
+.skater-large-upper {
+  width: 100%;
+  margin-bottom: 10px; }
+  .skater-large-upper::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .skater4,
 .skater3 {
@@ -134,14 +143,11 @@ body {
   .skater3:last-child {
     margin-right: 0; }
 
+.skater-large-lower {
+  width: 100%; }
+
 .skater1 {
-  float: left;
-  display: block;
-  margin-right: 3.57866%;
-  width: 100%;
   height: 232px; }
-  .skater1:last-child {
-    margin-right: 0; }
 
 .skater2 {
   float: left;

@@ -118,6 +118,13 @@ body {
 
 .skater-large {
   @include span-columns(8);
+  height: 474px;
+}
+
+.skater-large-upper {
+  @include fill-parent();
+  @include clearfix;
+  margin-bottom: 10px;
 }
 
 .skater4,
@@ -127,8 +134,11 @@ body {
   height: 232px;
 }
 
+.skater-large-lower {
+  @include fill-parent();
+}
+
 .skater1 {
-  @include span-columns(8 of 8);
   height: 232px;
 }
 
