@@ -8,6 +8,7 @@ $nav-button: rgba(179, 46, 46, 1);
 $background-color: white;
 $text-color: white;
 $light-text: rgba(174, 174, 174, 1);
+$overlay: rgba(255, 255, 255, 0.4);
 $shadow-color: rgba(255, 255, 255, 0.5);
 $shadow-color-2: rgba(0, 0, 0, 0.3);
 $shadow-color-3: rgba(0, 0, 0, 0.5);
@@ -22,6 +23,7 @@ $box-shadow: 0 5px $shadow-color;
 
 // Breakpoints
 $mobile: new-breakpoint(max-width 768px 6);
+$desktop: new-breakpoint(min-width 769px);
 
 // background image
 body {
@@ -80,6 +82,11 @@ a {
   }
 }
 
+.social-box:hover .fa {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
 .subscribe {
   display: inline-block;
   padding-right: 100px;
@@ -136,6 +143,8 @@ a {
 .fa {
   color: $text-color;
   opacity: 0.3;
+
+  transition: all 0.25s ease-in-out;
 }
 
 // Navigation boxes
@@ -212,12 +221,22 @@ a {
 
   box-shadow: 0 4px $shadow-color-2;
 
+  transition: all 0.5s ease-in-out;
+
   @include media($mobile) {
     display: block;
     height: 60px;
     width: 400px;
     line-height: 60px;
     font-size: 0.5em;
+  }
+}
+
+.nav-box:hover {
+  @include media($desktop) {
+    transition: all 0.5s ease-in-out;
+    font-size: 1.2em;
+    padding-top: 1px;
   }
 }
 
@@ -253,6 +272,10 @@ a {
 }
 
 // Buttons
+.nav-buttons-wrapper {
+  margin: 15px auto;
+}
+
 .nav-buttons {
   padding: 0;
   text-align: center;
@@ -261,8 +284,8 @@ a {
 .nav-button {
   list-style: none;
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   background-color: white;
 }
@@ -344,6 +367,7 @@ a {
 }
 
 .skater-pic {
+  position: relative;
   background-color: white;
   border: 5px solid white;
   text-align: center;
@@ -351,6 +375,19 @@ a {
   box-shadow: 0 4px $shadow-color-2;
 }
 
+.skater-pic::before {
+  content: "";
+  background-color: $overlay;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.skater-pic:hover::before {
+  background-color: transparent;
+}
 
 .skater-pic-text {
   font-family: $helvetica;
