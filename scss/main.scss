@@ -531,6 +531,10 @@ a {
   background-color: $background-color;
 
   box-shadow: 0 4px $shadow-color-2;
+
+  @include media($mobile) {
+    height: auto;
+  }
 }
 
 .skateboards {
