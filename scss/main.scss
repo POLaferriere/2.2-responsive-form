@@ -183,8 +183,10 @@ a {
 }
 
 .nav-menu:hover .nav-boxes{
+  @include media($mobile) {
   height: 250px;
   z-index: 1000;
+}
 }
 
 .nav-box-link {

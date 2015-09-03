@@ -156,9 +156,10 @@ a {
         content: "";
         display: table; } }
 
-.nav-menu:hover .nav-boxes {
-  height: 250px;
-  z-index: 1000; }
+@media screen and (max-width: 768px) {
+  .nav-menu:hover .nav-boxes {
+    height: 250px;
+    z-index: 1000; } }
 
 .nav-box-link {
   float: left;
